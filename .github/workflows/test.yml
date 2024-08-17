@@ -6,8 +6,6 @@ jobs:
         steps:
             - name: Get Code
               uses: actions/checkout@v4
-              with:
-                path: main
             - name: Installa Node.js
               uses: actions/setup-node@v4
               with:
@@ -15,11 +13,9 @@ jobs:
             - name: list files
               run: ls -lR
             - name: Install dependencies
-              run: |
-                cd second-action-react-demo & npm ci
+              run: npm ci
             - name: Run tests
-              run: |
-                cd second-action-react-demo & npm test
+              run: npm test
 
             
         
