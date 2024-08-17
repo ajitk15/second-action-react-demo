@@ -12,6 +12,8 @@ jobs:
               uses: actions/setup-node@v4
               with:
                  node-version: 18
+            - name: list files
+              run: ls -lR
             - name: Install dependencies
               run: |
                 cd second-action-react-demo & npm ci
